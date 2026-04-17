@@ -1,0 +1,103 @@
+{
+  "baseline": {
+    "mask": {
+      "input_precisions": [256, 512, 1024],
+      "shared_count": 10000,
+      "stable_count": 91,
+      "stable_prefix_end": 91,
+      "stable_n_range": [1, 91],
+      "l_tol": "1e-20",
+      "s_tol": "1e-20"
+    },
+    "conservative_run": {
+      "file": "results/khinchin_signature/pslq_attempts_stable_conservative.json",
+      "total_attempts": 546,
+      "status_counts": {
+        "unsupported": 546
+      },
+      "by_template": {
+        "T1_L_LminusK_logn": {"unsupported": 91},
+        "T2_L_LminusK_logL": {"unsupported": 91},
+        "T3_L_logL_logn": {"unsupported": 91},
+        "T4_LminusK_logL_n": {"unsupported": 91},
+        "T5_L_logL_LminusK": {"unsupported": 91},
+        "T7_full4": {"unsupported": 91}
+      },
+      "residual_pattern": {
+        "nonnull_residual_count": 0,
+        "comment": "No small-coefficient candidate survived the conservative cap; estimated_digits remained 0.0 across all templates."
+      }
+    }
+  },
+  "wide_cap_diagnostics": {
+    "file": "results/khinchin_signature/pslq_attempts_stable.json",
+    "status_counts": {
+      "unsupported": 455,
+      "verified": 91
+    },
+    "nonunsupported_by_template": {
+      "T3_L_logL_logn": {
+        "count": 1,
+        "min_max_coeff": 968826,
+        "median_max_coeff": 968826,
+        "examples": [
+          {
+            "n": 33,
+            "coeffs": [424269, 968826, -743242],
+            "residual": "0.0"
+          }
+        ]
+      },
+      "T7_full4": {
+        "count": 90,
+        "min_max_coeff": 43197,
+        "median_max_coeff": 173198.5,
+        "examples": [
+          {
+            "n": 41,
+            "coeffs": [43197, 7010, -40887, -33583],
+            "residual": "0.0"
+          },
+          {
+            "n": 55,
+            "coeffs": [44044, -27912, -499, -24449],
+            "residual": "0.0"
+          },
+          {
+            "n": 19,
+            "coeffs": [2018, 38062, 52051, -12855],
+            "residual": "0.0"
+          }
+        ]
+      }
+    },
+    "interpretation": "Wide-cap hits emerge only when coefficient limits are loosened dramatically, supporting their classification as exploratory high-coefficient fits rather than robust arithmetic relations."
+  },
+  "visualization_targets": [
+    {
+      "figure": "Conservative status-by-template bar chart",
+      "source": "results/khinchin_signature/pslq_attempts_stable_conservative.json",
+      "mapping": {"x": "template_id", "y": "count(status)", "stack": "status"},
+      "narrative": "Shows the clean null baseline across all six templates."
+    },
+    {
+      "figure": "Wide-cap versus conservative comparison bars",
+      "source": "both attempt files",
+      "mapping": {"x": "template_id", "y": "count(status != unsupported)", "group": "run_type"},
+      "narrative": "Demonstrates that apparent hits appear only after cap relaxation."
+    },
+    {
+      "figure": "n versus max coefficient scatter for wide-cap artefacts",
+      "source": "results/khinchin_signature/pslq_attempts_stable.json",
+      "mapping": {"x": "n", "y": "max(abs(coeffs))", "color": "template_id"},
+      "narrative": "Makes the large-coefficient nature of the artefacts visually explicit."
+    },
+    {
+      "figure": "Mask stability profile",
+      "source": "results/khinchin_signature/mask.json",
+      "mapping": {"x": "n", "y": ["diff_L_256_512", "diff_L_512_1024"]},
+      "narrative": "Justifies restricting the study to the stable prefix n <= 91."
+    }
+  ],
+  "experimental_note": "Using the 256, 512, and 1024 precision pi runs, we restricted attention to the contiguous stability-certified prefix n <= 91, where both L_n and S_n agree across precisions at the 1e-20 tolerance level. On this stabilized dataset we executed six 3D/4D PSLQ templates at 300-digit working precision with 600-digit confirmation. Under the conservative coefficient cap maxcoeff = 1000, all 546 attempts were unsupported, giving a clean null result for this template family. A wider exploratory pass with maxcoeff = 1e6 produced 91 nominal hits, but these were confined to very large integer coefficients, with median max coefficient about 1.7e5 in the dominant 4D template and nearly 9.7e5 in the lone 3D case. Tightening the coefficient cap removed them completely, so they are best interpreted as diagnostic artefacts rather than genuine relations. The clearest next step is to export this as a high-quality null result and then test the same masked workflow on different constants or enriched coordinate families rather than forcing a relation here."
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "file": "figures/figure1_stable_prefix.png",
+    "caption": "Stable-prefix overview of S_n on the certified range n = 1..91."
+  },
+  {
+    "file": "figures/figure2_conservative_residual_hist.png",
+    "caption": "Conservative residual histogram panel; rendered as a null-result annotation because the artifact stores no residual payloads for unsupported attempts."
+  },
+  {
+    "file": "figures/figure3_conservative_residuals_vs_n.png",
+    "caption": "Conservative residual-versus-n panel; rendered as a null-result annotation for the same reason."
+  },
+  {
+    "file": "figures/figure4_widecap_coeff_scale.png",
+    "caption": "Per-template minimum and median of max|coeff| among wide-cap non-unsupported attempts on a log scale."
+  }
+]

@@ -1,0 +1,70 @@
+{
+  "T1_L_LminusK_logn": {
+    "counts": {
+      "total": 91,
+      "non_unsupported": 0,
+      "breakdown": {}
+    },
+    "coeff_stats": null,
+    "has_non_unsupported": false
+  },
+  "T2_L_LminusK_logL": {
+    "counts": {
+      "total": 91,
+      "non_unsupported": 0,
+      "breakdown": {}
+    },
+    "coeff_stats": null,
+    "has_non_unsupported": false
+  },
+  "T3_L_logL_logn": {
+    "counts": {
+      "total": 91,
+      "non_unsupported": 1,
+      "breakdown": {
+        "verified": 1
+      }
+    },
+    "coeff_stats": {
+      "min": 968826,
+      "median": 968826
+    },
+    "has_non_unsupported": true
+  },
+  "T4_LminusK_logL_n": {
+    "counts": {
+      "total": 91,
+      "non_unsupported": 0,
+      "breakdown": {}
+    },
+    "coeff_stats": null,
+    "has_non_unsupported": false
+  },
+  "T5_L_logL_LminusK": {
+    "counts": {
+      "total": 91,
+      "non_unsupported": 0,
+      "breakdown": {}
+    },
+    "coeff_stats": null,
+    "has_non_unsupported": false
+  },
+  "T7_full4": {
+    "counts": {
+      "total": 91,
+      "non_unsupported": 90,
+      "breakdown": {
+        "verified": 90
+      }
+    },
+    "coeff_stats": {
+      "min": 43197,
+      "median": 173198.5
+    },
+    "has_non_unsupported": true
+  },
+  "templates_with_non_unsupported": [
+    "T3_L_logL_logn",
+    "T7_full4"
+  ]
+}
