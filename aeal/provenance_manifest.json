@@ -1,0 +1,50 @@
+{
+  "project": "khinchin-signature-pslq",
+  "title": "A Precision-Controlled Null Result for a Khinchin-Signature PSLQ Family",
+  "version": "0.1.0",
+  "verified_on": "2026-04-17",
+  "inputs": {
+    "multi_precision_runs": [
+      "results/khinchin_signature/pi_n10000_p256.json",
+      "results/khinchin_signature/pi_n10000_p512.json",
+      "results/khinchin_signature/pi_n10000_p1024.json"
+    ],
+    "saved_diagnostics": [
+      "artifacts/residual_logs/pslq_attempts_stable_conservative.json",
+      "artifacts/wide_cap_diagnostics/pslq_attempts_stable.json"
+    ]
+  },
+  "derived_artifacts": {
+    "stable_prefix": "artifacts/stable_prefix.json",
+    "status_block": "artifacts/status_blocks/agent_h_status_block.json",
+    "fresh_reproduction_log": "artifacts/status_blocks/pslq_attempts_reproduced.json",
+    "paper": "paper/khinchin_signature_expmath_note.tex",
+    "pdf": "paper/khinchin_signature_expmath_note.pdf"
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "The certified stable prefix has length 91.",
+      "evidence": [
+        "artifacts/stable_prefix.json",
+        "artifacts/status_blocks/agent_h_status_block.json"
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "The conservative sweep yields 546 unsupported attempts and no supported low-complexity relations.",
+      "evidence": [
+        "artifacts/status_blocks/pslq_attempts_reproduced.json",
+        "artifacts/residual_logs/pslq_attempts_stable_conservative.json"
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Wide-cap fits are confined to a high-coefficient diagnostic regime dominated by the 4D template.",
+      "evidence": [
+        "artifacts/wide_cap_diagnostics/pslq_attempts_stable.json",
+        "artifacts/residual_logs/residual_analysis_summary.json"
+      ]
+    }
+  ]
+}

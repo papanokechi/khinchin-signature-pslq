@@ -1,0 +1,80 @@
+{
+  "T1_L_LminusK_logn": {
+    "counts": {
+      "total": 91,
+      "unsupported": 91,
+      "other_statuses": {}
+    },
+    "residual_stats": {
+      "min": null,
+      "median": null,
+      "max": null,
+      "count": 0
+    }
+  },
+  "T2_L_LminusK_logL": {
+    "counts": {
+      "total": 91,
+      "unsupported": 91,
+      "other_statuses": {}
+    },
+    "residual_stats": {
+      "min": null,
+      "median": null,
+      "max": null,
+      "count": 0
+    }
+  },
+  "T3_L_logL_logn": {
+    "counts": {
+      "total": 91,
+      "unsupported": 91,
+      "other_statuses": {}
+    },
+    "residual_stats": {
+      "min": null,
+      "median": null,
+      "max": null,
+      "count": 0
+    }
+  },
+  "T4_LminusK_logL_n": {
+    "counts": {
+      "total": 91,
+      "unsupported": 91,
+      "other_statuses": {}
+    },
+    "residual_stats": {
+      "min": null,
+      "median": null,
+      "max": null,
+      "count": 0
+    }
+  },
+  "T5_L_logL_LminusK": {
+    "counts": {
+      "total": 91,
+      "unsupported": 91,
+      "other_statuses": {}
+    },
+    "residual_stats": {
+      "min": null,
+      "median": null,
+      "max": null,
+      "count": 0
+    }
+  },
+  "T7_full4": {
+    "counts": {
+      "total": 91,
+      "unsupported": 91,
+      "other_statuses": {}
+    },
+    "residual_stats": {
+      "min": null,
+      "median": null,
+      "max": null,
+      "count": 0
+    }
+  }
+}

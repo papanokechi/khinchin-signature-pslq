@@ -1,0 +1,48 @@
+{
+  "artifact_root": "results/khinchin_signature",
+  "coord_mode": "S_n",
+  "stable_prefix_end": 91,
+  "stable_count": 91,
+  "total_conservative_attempts": 546,
+  "baseline_status_counts": {
+    "unsupported": 546
+  },
+  "widecap_status_counts": {
+    "unsupported": 455,
+    "verified": 91
+  },
+  "conservative_counts_by_template": {
+    "T1_L_LminusK_logn": 91,
+    "T2_L_LminusK_logL": 91,
+    "T3_L_logL_logn": 91,
+    "T4_LminusK_logL_n": 91,
+    "T5_L_logL_LminusK": 91,
+    "T7_full4": 91
+  },
+  "widecap_non_unsupported_by_template": {
+    "T1_L_LminusK_logn": 0,
+    "T2_L_LminusK_logL": 0,
+    "T3_L_logL_logn": 1,
+    "T4_LminusK_logL_n": 0,
+    "T5_L_logL_LminusK": 0,
+    "T7_full4": 90
+  },
+  "generated_figures": [
+    "results/khinchin_signature/figures/figure1_stable_prefix.png",
+    "results/khinchin_signature/figures/figure2_conservative_residual_hist.png",
+    "results/khinchin_signature/figures/figure3_conservative_residuals_vs_n.png",
+    "results/khinchin_signature/figures/figure4_widecap_coeff_scale.png"
+  ],
+  "generated_svg_figures": [
+    "results/khinchin_signature/figures/figure1_stable_prefix.svg",
+    "results/khinchin_signature/figures/figure2_conservative_residual_hist.svg",
+    "results/khinchin_signature/figures/figure3_conservative_residuals_vs_n.svg",
+    "results/khinchin_signature/figures/figure4_widecap_coeff_scale.svg"
+  ],
+  "generated_table": "results/khinchin_signature/agent_h_table1.tex",
+  "generated_numerics_section": "results/khinchin_signature/agent_h_numerical_experiments.tex",
+  "generated_discussion": "results/khinchin_signature/agent_h_discussion.tex",
+  "generated_abstract": "results/khinchin_signature/agent_h_abstract.txt",
+  "generated_note": "results/khinchin_signature/khinchin_signature_expmath_note.tex",
+  "vector_figure_note": "SVG master assets are available alongside the PNG figures for manuscript production."
+}
